@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/platsparkering/static/css/main.e6c13ad2.css",
+    "main.js": "/platsparkering/static/js/main.ad98a135.js",
+    "static/js/787.6f9439cc.chunk.js": "/platsparkering/static/js/787.6f9439cc.chunk.js",
+    "index.html": "/platsparkering/index.html",
+    "main.e6c13ad2.css.map": "/platsparkering/static/css/main.e6c13ad2.css.map",
+    "main.ad98a135.js.map": "/platsparkering/static/js/main.ad98a135.js.map",
+    "787.6f9439cc.chunk.js.map": "/platsparkering/static/js/787.6f9439cc.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.ad98a135.js"
+  ]
+}
