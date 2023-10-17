@@ -10,6 +10,7 @@
 
 # production
 /build
+/platspaerkering
 
 # misc
 .DS_Store
