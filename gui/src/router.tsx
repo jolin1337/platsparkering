@@ -1,4 +1,4 @@
-import {createBrowserRouter} from "react-router-dom";
+import {createHashRouter, useNavigate} from "react-router-dom";
 import MainSearch from './pages/MainSearch';
 import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
@@ -7,17 +7,25 @@ import CheckoutSummary from "./pages/CheckoutSummary";
 import ErrorPage from "./pages/ErrorPage";
 import CreateParking from "./pages/CreateParking";
 import SearchResult, {loader as searchLoader} from './pages/SearchResult';
+import {useEffect} from "react";
 
 const authorize = ({params}) => {
   const userId = window.localStorage.getItem('currentUser');
   if (parseInt(userId) <= 0) {
-    window.location.href = '/login';
     return Promise.reject(Error("Unathorized"))
   }
   return Promise.resolve(null);
 };
 
-const router = createBrowserRouter([
+const Redirect = ({to}: {to: string}) => {
+  const navigate = useNavigate();
+  useEffect(() => {
+    navigate(to);
+  });
+  return <></>;
+};
+
+const router = createHashRouter([
   {
     path: "/",
     element: <MainSearch/>,
@@ -29,7 +37,8 @@ const router = createBrowserRouter([
   {
     path: "/dashboard",
     element: <Dashboard/>,
-    loader: authorize
+    loader: authorize,
+    errorElement: <Redirect to={'/login'}/>
   },
   {
     path: "/create-parking",

@@ -149,7 +149,7 @@ export const samples: Array<Slot> = [
     ],
     "stars": 4.5,
     "price": 4,
-    "picture": "/images/park-sample.png",
+    "picture": "./images/park-sample.png",
     "properties": {
       "size": SlotSize.medium,
     },
