@@ -22,7 +22,7 @@ function Login() {
       textAlign: 'center',
       paddingTop: 150,
       verticalAlign: 'middle',
-      backgroundImage: `url(images/bg.png)`,
+      backgroundImage: `url(platsparkering/images/bg.png)`,
       backgroundSize: 'calc(max(100vw, 100vh))'
     }}>
       <h1 style={{
